@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-sm  navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/home">ICIN Bank</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/deposit"
+            >Deposit Money<span class="sr-only"></span
+          ></a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/withdraw"
+            >Withdraw Money<span class="sr-only"></span
+          ></a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transaction_History">Transaction History<span class="sr-only"></span></a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transfer_history">Transfer History<span class="sr-only"></span></a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transfer">Transfer Money<span class="sr-only"></span></a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/request_chequebook">Request Checkbook<span class="sr-only"></span></a>
+        </li>
+  
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User Session</a>
+          <!-- <div class="dropdown-menu"  aria-labelledby="dropdown04">
+            <a class="dropdown-item" routerLink="/edit_profile" >Change Profile Settings</a>
+            <a class="dropdown-item" routerLink="/login">Logout</a>
+          </div> -->
+          <ul  class="dropdown-menu" aria-labelledby="dropdown04">
+
+            <li><a class="dropdown-item" routerLink="/edit_profile" >Change Profile Settings</a></li>
+            <li><a class="dropdown-item" routerLink="/login">Logout</a></li>
+
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  <body class="landing" >
+    <div class="infobox" style="text-align: center;">
+    <br>
+    <h2>Welcome to ICIN Bank </h2>
+    <br>
+    <h5>We offer you actions like Transfer of money, Checkbook request, Deposit, Withdraw</h5>
+    <br>
+    <h4>Happy Banking !!!</h4>
+    <br><br>
+
+    <!-- style="background-image:url('background.jpg');" -->
+    
+    <table class="center">
+    
+        <tr>
+            <td><h4>Your Savings Account number: </h4></td>
+            <td><h4>{{savingAcc}}</h4></td>
+        </tr>
+        <tr>
+          <td><h4>Your Savings Account balance : </h4></td>
+          <td><h4>{{savingBalanceLocal}}</h4></td>
+      </tr>
+    
+    </table>
+    </div>
+  </body>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
